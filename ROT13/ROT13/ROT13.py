@@ -8,11 +8,6 @@ UPPER_SET = ['a', 'b', 'c', 'd', 'e', 'f', 'g',
 LOWER_SET = ['n', 'o', 'p', 'q', 'r', 's', 't',
             'u', 'v', 'w', 'x', 'y', 'z']
 
-# reads the message the user wishes to encode/decode
-def read_string(msg):
-    message = input(msg)
-    return message
-
 # does the encoding/decoding
 def perform_cipher(msg):
     new_msg = ""
@@ -31,9 +26,9 @@ if __name__ == "__main__":
     entry = "y"
     
     while entry.lower() == "y":
-        message = read_string("Enter your message:\n")
+        message = input("Enter your message:\n")
         print("\nEncoded/Decoded message:\n" + perform_cipher(message))
 
-        entry = read_string("\nAgain? (y/n): ")
+        entry = input("\nAgain? (y/n): ")
 
     
