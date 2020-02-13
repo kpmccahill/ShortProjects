@@ -40,6 +40,8 @@ def again_prompt():
 if __name__ == "__main__":
 
     rand = random.Random()
+    clear = lambda: os.system('cls')
+    clear()
 
     while True:
         try:
@@ -48,10 +50,10 @@ if __name__ == "__main__":
             print("Please enter a number!")
             continue
 
-        os.system('cls')  # dont know if I wanna keep this
         print(build_str(rand.randint(0, max)))
         go_again = again_prompt()
 
         if go_again.lower() != "y":
             break
-        os.system('cls')
+
+        clear()
